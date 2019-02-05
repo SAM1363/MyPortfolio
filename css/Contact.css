@@ -1,5 +1,5 @@
 body{
-    background-image: url(/img/back.jpg);
+    background-image: url(/img/dark.jpg);
 }
 .main-nav{
     display: flex;
@@ -41,8 +41,15 @@ h1{
     font-size: 4em;
 }
 label{
+    display: flex;
     color:white;
 }
 .form-container{
     padding-left: 11%;
+}
+input{
+    width:150px
+}
+.form-container div{
+    padding-bottom: 3%;
 }
