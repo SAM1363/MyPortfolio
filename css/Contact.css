@@ -1,16 +1,30 @@
 body{
+    margin:0;
+    background-position: center;
     background-image: url(/img/dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sticky, header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header{
+    opacity: 0.8;
+    border: 2px black solid;
+    background-color: black;
+    height: 70px;
 }
 .main-nav{
+    padding:0;
     display: flex;
-    /* background: rgb(216, 216, 216); */
     justify-content: space-around;
     font-size: 1.5em;
     font-family: sans-serif;
 }
-#menu{
 
-}
 .main-nav li{
     list-style-type: none;
 }
@@ -52,4 +66,19 @@ input{
 }
 .form-container div{
     padding-bottom: 3%;
+}
+@media(max-width: 450px){
+    .main-nav{
+        padding-bottom: 50px;
+    }
+}
+@media(max-width: 450px){
+    h1{
+        font-size:30px;
+    }
+}
+@media(max-width: 450px){
+    textarea{
+        width:350px;
+    }
 }
