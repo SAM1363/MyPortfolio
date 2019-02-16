@@ -1,0 +1,173 @@
+body, html, main {
+    /* important */
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.back{  
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top:3%; 
+  }
+  
+  .back.back--1 {
+    background-image: url(./img/dark.png);
+  }
+  
+  .back.back--2 {
+    background-image: url(./img/fix2.jpg);
+  }
+  
+  .back.back--3 {
+    background-image: url(./img/scroll1.jpg);
+  }
+  
+  .back.back--4 {
+    background-image: url(./img/scroll2.jpg);
+  }
+  
+  .scroll{
+    min-height: 100%;
+    background:lightpink;
+    /* background-size: cover;
+    background-image: url(./img/dark.png);
+    background-repeat: no-repeat; */
+  }
+body{
+    /* margin:0;
+    background-position: center;
+    background-image: url(/img/dark.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background:black;
+}
+.sticky, header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header{
+    opacity: 0.85;
+    border: 2px black solid;
+    background-color: black;
+    height: 70px;
+}
+.main-nav{
+    padding:0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.main-nav li{
+    list-style-type: none;
+}
+.main-nav a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: red;
+}
+a::after {
+    border-bottom: solid 2px red;
+    bottom: 0;
+    content: "";
+    display: block;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    width: 0;
+}
+a:hover::after {
+    width: 100%;
+}
+ .main-content{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 15%;
+    /* margin-bottom: 20%; */
+}
+.main-content h1{
+    text-align: center;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 550%;
+}
+.main-content p{
+    font-size: 1.2em;
+    font-family: sans-serif;
+    padding: 0%;
+    margin-top: -4%;
+    margin-bottom: 8%;
+    letter-spacing:3px;
+}
+/*
+.Skills{
+    padding-bottom: 100px; 
+}
+.Skills h1{
+    color:lightslategray;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em;
+    font-weight: 100;
+    margin-bottom: 40px;
+    margin-top:-12px;
+    text-align: center;
+}
+.Skills img{
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 30px 30px 30px;
+}
+.img-container{
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    padding-top:20px; 
+    margin: 30px 80px 30px 80px;
+} */
+@media (max-width: 760px){
+    .main-content h1{
+        font-size: 70px;
+    }
+ }
+@media (max-width: 610px){
+    .main-content h1{
+        font-size: 60px;
+    }
+ }
+@media (max-width: 525px){
+    .main-content h1{
+        font-size: 55px;
+    }
+ }
+@media (max-width: 500px){
+    .main-content h1{
+        font-size: 50px;
+    }
+ }
+ @media (max-width: 450px){
+    .main-content h1{
+        font-size: 40px;
+    }
+ }
+ @media (max-width: 400px){
+    .main-content p{
+        font-size: 20px;
+    }
+ }
+ @media (max-width: 400px){
+    .main-nav{
+        font-size: 20px;
+    }
+ }
