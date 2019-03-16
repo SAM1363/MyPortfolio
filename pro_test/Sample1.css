@@ -33,17 +33,8 @@ body, html, main {
   .scroll{
     min-height: 100%;
     background:lightpink;
-    /* background-size: cover;
-    background-image: url(./img/dark.png);
-    background-repeat: no-repeat; */
   }
 body{
-    /* margin:0;
-    background-position: center;
-    background-image: url(/img/dark.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
     background:black;
 }
 .sticky, header{
@@ -86,7 +77,7 @@ a::after {
 a:hover::after {
     width: 100%;
 }
- .main-content{
+.Home{
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
@@ -96,12 +87,12 @@ a:hover::after {
     margin-top: 15%;
     /* margin-bottom: 20%; */
 }
-.main-content h1{
+.Home h1{
     text-align: center;
     font-family: 'Goudy Bookletter 1911', serif;
     font-size: 550%;
 }
-.main-content p{
+.Home p{
     font-size: 1.2em;
     font-family: sans-serif;
     padding: 0%;
@@ -137,32 +128,32 @@ a:hover::after {
     margin: 30px 80px 30px 80px;
 } */
 @media (max-width: 760px){
-    .main-content h1{
+    .Home h1{
         font-size: 70px;
     }
  }
 @media (max-width: 610px){
-    .main-content h1{
+    .Home h1{
         font-size: 60px;
     }
  }
 @media (max-width: 525px){
-    .main-content h1{
+    .Home h1{
         font-size: 55px;
     }
  }
 @media (max-width: 500px){
-    .main-content h1{
+    .Home h1{
         font-size: 50px;
     }
  }
  @media (max-width: 450px){
-    .main-content h1{
+    .Home h1{
         font-size: 40px;
     }
  }
  @media (max-width: 400px){
-    .main-content p{
+    .Home p{
         font-size: 20px;
     }
  }
