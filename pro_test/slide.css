@@ -58,7 +58,7 @@
   }
   .css-slider-wrapper {
     display: block;
-    background: #FFF;
+    /* background: #FFF; */
     overflow: hidden;
     position: absolute;
     left: 0;
@@ -88,6 +88,7 @@
   }
    
   /* Slides Background Color */
+  .slider,
   .slide-1 {
     background-position: center;
     background-image: url(/img/dark.png);
@@ -118,11 +119,11 @@
     font-size: 40px;
     text-align: center;
   }
-  .slide-2,
+  /* .slide-2,
   .slide-3,
   .slide-4.slider-content{
 
-  }
+  } */
   /* .slider {
     display: flex;
     justify-content: flex-start;
@@ -243,7 +244,7 @@ transition-delay: 1.2s;
     height: 8px;
     border-radius: 50%;
     display: inline-block;
-    background: #fff;
+    /* background: #fff; */
     margin: 0 10px;
     cursor: pointer;
   }
