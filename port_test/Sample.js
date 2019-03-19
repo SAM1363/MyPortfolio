@@ -1,4 +1,4 @@
-
+// scroll page animaition
 $(document).ready(function() {
   $('#topButton').click(function() {    
     animateScrollTo('#topPage')
@@ -25,3 +25,15 @@ function animateScrollTo(id) {
       scrollTop: $(id).offset().top
   }, 600, 'swing');
 }
+
+// scroll nav animation
+let startPos = 0,winScrollTop = 0;
+$(window).on('scroll',function(){
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos) {
+        $('header').addClass('hide');
+    } else {
+        $('header').removeClass('hide');
+    }
+    startPos = winScrollTop;
+});

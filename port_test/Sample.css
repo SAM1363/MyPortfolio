@@ -6,7 +6,7 @@ body, html, main {
 }
 
 /*  矢印始め　*/
-.scroll-bar a {
+.Arrow a {
     position: absolute;
     bottom: 20px;
     left: 50% ;
@@ -16,24 +16,24 @@ body, html, main {
     transform: translate(0, -50%);
     text-decoration: none;
 }
-.scroll-bar a {
+.Arrow a {
     padding-top: 60px;
 }
-  .scroll-bar a span {
+.Arrow a span {
     position: absolute;
     top: 0;
     left: 50%;
     width: 24px;
     height: 24px;
     margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-left: 3px solid rgb(250, 12, 12);
+    border-bottom: 3px solid rgb(240, 17, 17);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-animation: sdb 2s infinite;
     animation: sdb 2s infinite;
     box-sizing: border-box;
-  }
+}
   @-webkit-keyframes sdb {
     0% {
       -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -58,7 +58,10 @@ body, html, main {
   }  
 /* 矢印終わり */
 
-.back{  
+/* //////////////  Background Stuff  ///////////////////////////////////////////////////////////////// */
+.back,
+.scroll{  
+    width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-attachment: fixed;
@@ -66,70 +69,136 @@ body, html, main {
     background-position: center center;
     padding-top:3%; 
 }
-.scroll{
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-top:3%; 
-}
+
 #topPage{
-    background:linear-gradient(rgba(20, 20, 20, .5),
-    rgba(20, 20, 20, .5)), 
-    url(./img/austin.jpg);
-    background-size: cover;
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 175, 189, 0.7),
+        rgba(100, 216, 243, 0.7),
+        rgba(234, 236, 198, 0.7),
+        rgba(245, 146, 176, 0.7),
+        rgba(52, 219, 216, 0.7)
+    )
+    0 0 / 1000% no-repeat,
+    url(./img/austin.jpg) 0 0 / cover no-repeat;
+    animation: gradientAnimation 40s ease infinite;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
+}
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+    100% {
+        background-position: 0% 30%, 0 0;
+    }
 }
 #aboutPage{
-    background:linear-gradient(rgba(20, 20, 20, .5),
-    rgba(20, 20, 20, .5)),  
-    url(./img/about2.png);
-    background-size: cover;
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 175, 189, 0.7),
+        rgba(100, 216, 243, 0.7),
+        rgba(234, 236, 198, 0.7),
+        rgba(245, 146, 176, 0.7),
+        rgba(52, 219, 216, 0.7)
+    )
+    0 0 / 1000% no-repeat,
+    url(./img/about2.png) 0 0 / cover no-repeat;
+    animation: gradientAnimation 40s ease infinite;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
+}
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+    100% {
+        background-position: 0% 30%, 0 0;
+    }
 }
 #projectsPage{
-    background:linear-gradient(rgba(20, 20, 20, .5),
-    rgba(20, 20, 20, .5)),  
-    url(./img/project2.png);
-    background-size: cover;
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 175, 189, 0.7),
+        rgba(100, 216, 243, 0.7),
+        rgba(234, 236, 198, 0.7),
+        rgba(245, 146, 176, 0.7),
+        rgba(52, 219, 216, 0.7)
+    )
+    0 0 / 1000% no-repeat,
+    url(./img/project2.png) 0 0 / cover no-repeat;
+    animation: gradientAnimation 40s ease infinite;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
+}
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+    100% {
+        background-position: 0% 30%, 0 0;
+    }
 }
 #contactPage{
-    background:linear-gradient(rgba(20, 20, 20, .5),
-    rgba(20, 20, 20, .5)),  
-    url(./img/contact.png);
-    background-size: cover;
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 175, 189, 0.7),
+        rgba(100, 216, 243, 0.7),
+        rgba(234, 236, 198, 0.7),
+        rgba(245, 146, 176, 0.7),
+        rgba(52, 219, 216, 0.7)
+    )
+    0 0 / 1000% no-repeat,
+    url(./img/contact.png) 0 0 / cover no-repeat;
+    /* background-position: right; */
+    animation: gradientAnimation 40s ease infinite;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center; }
-
-.projects-content,
-.about-content,
-.contact-content{
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    color: whitesmoke;
+}
+    @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+    100% {
+        background-position: 0% 30%, 0 0;
+    } 
 }
 
+/* //////////////////  Nav Stuff  ////////////////////////////////////////////////// */
 .sticky, header{
     position: fixed;
     top: 0;
     width: 100%;
 }
+/* for scroll nav animation  */
 header{
-    opacity: 0.5;
-    border: 2px black solid;
-    background-color: black;
-    height: 70px;
+    opacity: 0.75;
+    border: 2px white solid;
+    background-color: white;
+    height: 60px;
+    transition: .5s;
+
 }
+header.hide {
+    transform: translateY(-150%);
+}
+/* for scroll nav animation end */
+
 .main-nav{
     padding:0;
     display: flex;
@@ -137,29 +206,29 @@ header{
     font-size: 1.5em;
     font-family: sans-serif;
 }
+
 .main-nav a {
     text-decoration: none;
     text-transform: uppercase;
-    color: rgb(253, 4, 41);
-    font-size: 12px;
+    color: rgb(245, 32, 64);
+    font-size: 14px;
     font-weight: bold;
-    width: 107px;
-    height: 30px;
+    /* width: 107px; */
+    height: 25px;
     border: 2px solid transparent;
-    border-radius: 15px;
     display: inline-block;
     text-align: center;
-    line-height: 25px;
-    transition: all .2s;
+    line-height: 15px;
+    transition: all .6s;
   }
- .main-nav a:hover,
- .main-nav a:focus {
+ .main-nav a:hover {
     border-color: rgb(253, 4, 41);
-    background-color: rgba(44, 45, 47, 0);
 }
 
+/* ////////////////////  Text & Content Stuff  /////////////////////////////////// */
+/* Top page content */
 .Top{
-    display: flex;
+    display: flex; 
     justify-content: center;
     text-align: center;
     flex-direction: column;
@@ -179,6 +248,59 @@ header{
     margin-bottom: 8%;
     letter-spacing:5px;
 }
+.projects-content,
+.about-content,
+.contact-content{
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 40px;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+/* ////////////  Projects page content//////////////////////////////////////////////////////// */
+.DigitalCrafts-Projects,
+.LaPraim-Projects{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: red;
+    margin: 40px;
+}
+.Pro-Digi,
+.Pro-Lap{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid red;
+    width: 800px;
+    height: 140px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.projects-content{
+    display: inline;
+    text-align: center;
+}
+.Pro-Lap p {
+    margin: 1%;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.Pro-Digi p {
+    margin: 1%;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.Pro-Lap h3{
+    margin: 20px 0px 10px 0px;
+    letter-spacing: 7px;
+}
+.Pro-Digi h3{
+    margin: 20px 0px 10px 0px;
+    letter-spacing: 7px;
+}
+
 /*
 .Skills{
     padding-bottom: 100px; 
