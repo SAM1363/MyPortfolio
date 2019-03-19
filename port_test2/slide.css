@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+  }
+   
+  body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .navigation { 
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+   
+  .navigation-left {
+    margin-left: -33px;
+  }
+   
+  .navigation-left a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #84868f;
+    font-size: 12px;
+    font-weight: bold;
+    width: 107px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    transition: all .2s;
+  }
+   
+  .navigation-left a:hover,
+  .navigation-left a:focus {
+    border-color: rgb(234, 46, 73);
+    background-color: rgba(44, 45, 47, 0);
+  }
+   
+  /* .navigation-center {
+    margin-right: 85px;
+  } */
+   
+  /* .navigation-right {
+    display: flex;
+    align-items: center;
+  } */
+  .css-slider-wrapper {
+    display: block;
+    background: #FFF;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-transition: -webkit-transform 1200ms;
+    transition: -webkit-transform 1200ms, transform 1200ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+   
+  /* Slides Background */
+.slider,
+.slide-1 {
+/* background: black; */
+background-image: url(slide1.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+left: 0;
+}
+.slide-1 h2{
+  font-size: 80px;
+  
+}
+.slide-2 {
+background: black;
+left: 100%;
+}
+.slide-3 {
+background: black;
+left: 200%
+}
+.slide-4 {
+background: black;
+left: 300%;
+}
+.slide-2,
+.slide-3,
+.slide-4 h2{
+font-size: 40px;
+text-align: center;
+}
+/* .slide-2,
+.slide-3,
+.slide-4.slider-content{
+
+} */
+
+/* .slide-1.slider-content {
+width: 100%;
+padding-left: 100px;
+} */
+
+.slider h2 {
+font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+color: #84868f;
+font-weight: 800;
+text-transform: capitalize;
+line-height: 1.2;
+opacity: 0;
+-webkit-transform: translateX(500px);
+transform: translateX(500px);
+margin-top: 0;
+letter-spacing: 2px;
+}
+
+.slider h4 {
+font-size: 20px;
+font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+color: #84868f;
+font-weight: 700;
+text-transform: uppercase;
+line-height: 1.2;
+opacity: 0;
+letter-spacing:3px;
+-webkit-transform: translateX(500px);
+transform: translateX(500px);
+}
+
+/* .slider img {
+position: absolute;
+right: 10%;
+bottom: 0;
+height: 100%;
+opacity: 0;
+-webkit-transform: translateX(500px);
+transform: translateX(500px);
+} */
+
+.slider.navigation:focus {
+outline: none;
+}
+
+.slider h2 {
+-webkit-transition: opacity 800ms, -webkit-transform 800ms;
+transition: transform 800ms, opacity 800ms;
+-webkit-transition-delay: 1s; 
+transition-delay: 1s;
+}
+.slider h4 {
+-webkit-transition: opacity 800ms, -webkit-transform 800ms;
+transition: transform 800ms, opacity 800ms;
+-webkit-transition-delay: 1.4s; 
+transition-delay: 1.4s;
+}
+/* .slider img {
+-webkit-transition: opacity 800ms, -webkit-transform 800ms;
+transition: transform 800ms, opacity 800ms;
+-webkit-transition-delay: 1.2s; 
+transition-delay: 1.2s;
+} */
+
+
+
+/* Slider Pagger */
+.slider-pagination {
+position: absolute;
+bottom: 30px;
+width: 575px;
+left: 100px;
+z-index: 1000;
+display: flex;
+align-items: center;
+}
+.slider-pagination label {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+display: inline-block;
+margin: 0 10px;
+cursor: pointer;
+}
+
+/* Slider Pagger Event */
+.slide-radio1:checked ~ .slider-pagination .page1,
+.slide-radio2:checked ~ .slider-pagination .page2,
+.slide-radio3:checked ~ .slider-pagination .page3,
+.slide-radio4:checked ~ .slider-pagination .page4 {
+width: 14px;
+height: 14px;
+border: 2px solid #ea2e49;
+/* background: transparent; */
+}
+
+/* Slider Slide Effect */
+.slide-radio1:checked ~ .slider {
+-webkit-transform: translateX(0%);
+transform: translateX(0%);
+}
+.slide-radio2:checked ~ .slider {
+-webkit-transform: translateX(-100%);
+transform: translateX(-100%);
+}
+.slide-radio3:checked ~ .slider {
+-webkit-transform: translateX(-200%);
+transform: translateX(-200%);
+}
+.slide-radio4:checked ~ .slider {
+-webkit-transform: translateX(-300%);
+transform: translateX(-300%);
+}
+
+.slide-radio1:checked ~ .slide-1 h2,
+.slide-radio2:checked ~ .slide-2 h2,
+.slide-radio3:checked ~ .slide-3 h2,
+.slide-radio4:checked ~ .slide-4 h2,
+.slide-radio1:checked ~ .slide-1 h4,
+.slide-radio2:checked ~ .slide-2 h4,
+.slide-radio3:checked ~ .slide-3 h4,
+.slide-radio4:checked ~ .slide-4 h4,
+.slide-radio1:checked ~ .slide-1 img,
+.slide-radio2:checked ~ .slide-2 img,
+.slide-radio3:checked ~ .slide-3 img,
+.slide-radio4:checked ~ .slide-4 img {
+-webkit-transform: translateX(0);
+transform: translateX(0);
+opacity: 1
+}
+
+/* Responsive */
+@media only screen and (max-width: 350px) {
+.slider h2 {
+    font-size: 15px;
+}
+.slider h4 {
+    font-size: 10px;
+}
+
+.slider-content {
+    padding: 0 2%
+}
+
+.navigation {
+    padding: 0 2%;
+}
+
+.navigation-left {
+    display: none;
+}
+
+.number-pagination {
+    right: 2%;
+}
+.slider-pagination {
+    left: 2%;
+}
+
+.slider {
+    padding: 0 15px;
+    width: 175px;
+    height: 42px;
+}
+
+.slider:after {
+    top: 15px;
+}
+
+/* .slider img {
+    right: 2%;
+} */
+
+/* .slide-1 img {
+    right: -110px;
+} */
+}

@@ -1,0 +1,243 @@
+body, html, main {
+    /* important */
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+/*  矢印始め　*/
+.scroll-bar a {
+    position: absolute;
+    bottom: 20px;
+    left: 50% ;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-decoration: none;
+}
+.scroll-bar a {
+    padding-top: 60px;
+}
+  .scroll-bar a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+    }
+  } 
+   @keyframes sdb {
+    0% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+    20% {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+      transform: rotate(-45deg) translate(0, 0);
+    }
+  }  
+/* 矢印終わり */
+
+.back{  
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top:3%; 
+}
+.scroll{
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top:3%; 
+}
+#topPage{
+    background:linear-gradient(rgba(20, 20, 20, .5),
+    rgba(20, 20, 20, .5)), 
+    url(./img/austin.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+#aboutPage{
+    background:linear-gradient(rgba(20, 20, 20, .5),
+    rgba(20, 20, 20, .5)),  
+    url(./img/about2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+#projectsPage{
+    background:linear-gradient(rgba(20, 20, 20, .5),
+    rgba(20, 20, 20, .5)),  
+    url(./img/project2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+#contactPage{
+    background:linear-gradient(rgba(20, 20, 20, .5),
+    rgba(20, 20, 20, .5)),  
+    url(./img/contact.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; }
+
+.projects-content,
+.about-content,
+.contact-content{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.sticky, header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header{
+    opacity: 0.5;
+    border: 2px black solid;
+    background-color: black;
+    height: 70px;
+}
+.main-nav{
+    padding:0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+.main-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(253, 4, 41);
+    font-size: 12px;
+    font-weight: bold;
+    width: 107px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    transition: all .2s;
+  }
+ .main-nav a:hover,
+ .main-nav a:focus {
+    border-color: rgb(253, 4, 41);
+    background-color: rgba(44, 45, 47, 0);
+}
+
+.Top{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgb(243, 4, 4);
+    margin-top: 15%;
+}
+.Top h1{
+    text-align: center;
+    font-size: 550%;
+}
+.Top p{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 0%;
+    margin-top: -4%;
+    margin-bottom: 8%;
+    letter-spacing:5px;
+}
+/*
+.Skills{
+    padding-bottom: 100px; 
+}
+.Skills h1{
+    color:lightslategray;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em;
+    font-weight: 100;
+    margin-bottom: 40px;
+    margin-top:-12px;
+    text-align: center;
+}
+.Skills img{
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    margin: 0px 30px 30px 30px;
+}
+.img-container{
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    padding-top:20px; 
+    margin: 30px 80px 30px 80px;
+} */
+@media (max-width: 760px){
+    .Top h1{
+        font-size: 70px;
+    }
+ }
+@media (max-width: 610px){
+    .Top h1{
+        font-size: 60px;
+    }
+ }
+@media (max-width: 525px){
+    .Top h1{
+        font-size: 55px;
+    }
+ }
+@media (max-width: 500px){
+    .Top h1{
+        font-size: 50px;
+    }
+ }
+ @media (max-width: 450px){
+    .Top h1{
+        font-size: 40px;
+    }
+ }
+ @media (max-width: 400px){
+    .Top p{
+        font-size: 20px;
+    }
+ }
+ @media (max-width: 400px){
+    .main-nav{
+        font-size: 20px;
+    }
+ }
