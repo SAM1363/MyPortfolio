@@ -1,9 +1,60 @@
 body, html, main {
     /* important */
     height: 100%;
-    margin: 0%;
+    width:100%;
+    margin: 0% auto;
     padding: 0%;
 }
+a{
+    text-decoration: none;
+}
+
+/* //////////////////  Nav Stuff  ////////////////////////////////////////////////// */
+
+.sticky, header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+header{
+    opacity: 0.75;
+    border: 2px white solid;
+    background-color: white;
+    height: 60px;
+    transition: .5s;
+    /* -webkit-transform: translate3d(0, 0, 10px);
+    transform: translate3d(0, 0, 10px); */
+}
+header.hide {
+    transform: translateY(-150%);
+}
+
+.main-nav{
+    padding: 0%;
+    margin: 17px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    font-family: sans-serif;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: rgb(245, 32, 64);
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    height: 25px;
+    border: 2px solid transparent;
+    text-align: center;
+    line-height: 25px;
+    transition: all .6s;
+  }
+ .main-nav a:hover {
+    border-color: rgb(253, 4, 41);
+}
+
 
 /*  矢印始め　*/
 .Arrow a {
@@ -15,10 +66,9 @@ body, html, main {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     text-decoration: none;
+    padding-top: 60px
 }
-.Arrow a {
-    padding-top: 60px;
-}
+
 .Arrow a span {
     position: absolute;
     top: 0;
@@ -59,25 +109,71 @@ body, html, main {
 /* 矢印終わり */
 
 /* //////////////  Background Stuff  ///////////////////////////////////////////////////////////////// */
-.back,
-.scroll{  
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
+div.sameEffect{
+    position: relative;
+    height: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+.gradient{
+    padding-top: 3%;
+    -webkit-transform: translate3d(0, 0, 1px);
+    transform: translate3d(0, 0, 1px);
+    background: linear-gradient(45deg,
+    rgba(133, 93, 93, 0.7),
+    rgba(100, 216, 243, 0.7),
+    rgba(234, 236, 198, 0.7),
+    rgba(146, 156, 245, 0.7),
+    rgba(52, 219, 216, 0.7));
+    background-size: 1000%;
+    height: 100vh;
+    animation: gradientAnimation 50s ease infinite;
     background-position: center center;
-    padding-top:3%; 
+
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+    100% {
+        background-position: 0% 30%, 0 0;
+    }
 }
 
 #topPage{
+    background: url(./img/austin.jpg);
+    background-position: center center;
+
+}
+#aboutPage{
+    background: url(./img/about2.png);
+    background-position: center center;
+
+}
+#projectsPage{
+    background: url(./img/project2.png);
+    background-position: center center;
+
+}
+#contactPage{
+    background: url(./img/contact.png);
+    background-position: center center;
+}
+
+/* #topPage{
+    padding-top:3%; 
     height: 100vh;
     background: linear-gradient(
-        45deg,
-        rgba(255, 175, 189, 0.7),
+       45deg,
+        rgba(133, 93, 93, 0.7),
         rgba(100, 216, 243, 0.7),
         rgba(234, 236, 198, 0.7),
-        rgba(245, 146, 176, 0.7),
+        rgba(146, 156, 245, 0.7),
         rgba(52, 219, 216, 0.7)
     )
     0 0 / 1000% no-repeat,
@@ -97,14 +193,16 @@ body, html, main {
         background-position: 0% 30%, 0 0;
     }
 }
+    
 #aboutPage{
+    padding-top:3%; 
     height: 100vh;
     background: linear-gradient(
-        45deg,
-        rgba(255, 175, 189, 0.7),
+       45deg,
+        rgba(133, 93, 93, 0.7),
         rgba(100, 216, 243, 0.7),
         rgba(234, 236, 198, 0.7),
-        rgba(245, 146, 176, 0.7),
+        rgba(146, 156, 245, 0.7),
         rgba(52, 219, 216, 0.7)
     )
     0 0 / 1000% no-repeat,
@@ -125,13 +223,14 @@ body, html, main {
     }
 }
 #projectsPage{
+    padding-top:3%; 
     height: 100vh;
     background: linear-gradient(
-        45deg,
-        rgba(255, 175, 189, 0.7),
+       45deg,
+        rgba(133, 93, 93, 0.7),
         rgba(100, 216, 243, 0.7),
         rgba(234, 236, 198, 0.7),
-        rgba(245, 146, 176, 0.7),
+        rgba(146, 156, 245, 0.7),
         rgba(52, 219, 216, 0.7)
     )
     0 0 / 1000% no-repeat,
@@ -152,20 +251,21 @@ body, html, main {
     }
 }
 #contactPage{
+    padding-top:3%; 
     height: 100vh;
     background: linear-gradient(
-        45deg,
-        rgba(255, 175, 189, 0.7),
+       45deg,
+        rgba(133, 93, 93, 0.7),
         rgba(100, 216, 243, 0.7),
         rgba(234, 236, 198, 0.7),
-        rgba(245, 146, 176, 0.7),
+        rgba(146, 156, 245, 0.7),
         rgba(52, 219, 216, 0.7)
     )
     0 0 / 1000% no-repeat,
     url(./img/contact.png) 0 0 / cover no-repeat;
-    /* background-position: right; */
     animation: gradientAnimation 40s ease infinite;
     background-attachment: fixed;
+    background-position: center center;
 }
     @keyframes gradientAnimation {
     0% {
@@ -176,54 +276,9 @@ body, html, main {
     }
     100% {
         background-position: 0% 30%, 0 0;
-    } 
-}
+    }
+} */
 
-/* //////////////////  Nav Stuff  ////////////////////////////////////////////////// */
-.sticky, header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-/* for scroll nav animation  */
-header{
-    opacity: 0.75;
-    border: 2px white solid;
-    background-color: white;
-    height: 60px;
-    transition: .5s;
-
-}
-header.hide {
-    transform: translateY(-150%);
-}
-/* for scroll nav animation end */
-
-.main-nav{
-    padding:0;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.5em;
-    font-family: sans-serif;
-}
-
-.main-nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(245, 32, 64);
-    font-size: 14px;
-    font-weight: bold;
-    /* width: 107px; */
-    height: 25px;
-    border: 2px solid transparent;
-    display: inline-block;
-    text-align: center;
-    line-height: 15px;
-    transition: all .6s;
-  }
- .main-nav a:hover {
-    border-color: rgb(253, 4, 41);
-}
 
 /* ////////////////////  Text & Content Stuff  /////////////////////////////////// */
 /* Top page content */
@@ -234,10 +289,18 @@ header.hide {
     flex-direction: column;
     color: rgb(243, 4, 4);
     margin-top: 15%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
 }
 .Top h1{
     text-align: center;
-    font-size: 550%;
+    font-size: 70px;
 }
 .Top p{
     font-size: 1.2em;
@@ -248,7 +311,7 @@ header.hide {
     margin-bottom: 8%;
     letter-spacing:5px;
 }
-.projects-content,
+/* .projects-content,
 .about-content,
 .contact-content{
     justify-content: center;
@@ -257,9 +320,11 @@ header.hide {
     font-size: 40px;
     flex-direction: row;
     margin-top: 100px;
-}
+} */
+/* ////////////  About page content  ////////////////////////////////////////////////////////////////////////// */
 
-/* ////////////  Projects page content//////////////////////////////////////////////////////// */
+
+/* ////////////  Projects page content  //////////////////////////////////////////////////////// */
 .DigitalCrafts-Projects,
 .LaPraim-Projects{
     display: flex;
@@ -301,65 +366,121 @@ header.hide {
     letter-spacing: 7px;
 }
 
-/*
-.Skills{
-    padding-bottom: 100px; 
-}
-.Skills h1{
-    color:lightslategray;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 4em;
-    font-weight: 100;
-    margin-bottom: 40px;
-    margin-top:-12px;
-    text-align: center;
-}
-.Skills img{
-    border-radius: 15px;
-    width: 60px;
-    height: 60px;
-    margin: 0px 30px 30px 30px;
-}
-.img-container{
-    background-color: black;
-    opacity: 0.7;
-    display: flex;
-    justify-content: center;
-    padding-top:20px; 
-    margin: 30px 80px 30px 80px;
-} */
-@media (max-width: 760px){
-    .Top h1{
-        font-size: 70px;
+/* /////////  Responsive Design  ////////////////////////////////////////////// */
+@media (max-width: 768px){
+    
+    #topPage{
+        background: none;
+    }    
+    /*PC用の背景はオフ*/
+    #topPage::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    width: 100%;
+    height: 100vh;
+    background: url(./img/austin.jpg) center/cover no-repeat;
+    /*fixedをトル！*/
+    -webkit-background-size: cover;
+    /*Android4*/
     }
+
+    #aboutPage{
+        background: none;
+    }    
+      /*PC用の背景はオフ*/
+    #aboutPage::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    width: 100%;
+    height: 100vh;
+    background: url(./img/about2.png) center/cover no-repeat;
+    /*fixedをトル！*/
+    -webkit-background-size: cover;
+    /*Android4*/
+    }
+    #projectsPage{
+        background: none;
+    }    
+      /*PC用の背景はオフ*/
+    #projectsPage::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    width: 100%;
+    height: 100vh;
+    background: url(./img/project2.png) center/cover no-repeat;
+    /*fixedをトル！*/
+    -webkit-background-size: cover;
+    /*Android4*/
+    }
+    #contactPage{
+        background: none;
+    }    
+      /*PC用の背景はオフ*/
+    #contactPage::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    width: 100%;
+    height: 100vh;
+    background: url(./img/contact.png) center/cover no-repeat;
+    /*fixedをトル！*/
+    -webkit-background-size: cover;
+    /*Android4*/
+    }
+
  }
 @media (max-width: 610px){
     .Top h1{
         font-size: 60px;
+
     }
  }
 @media (max-width: 525px){
     .Top h1{
         font-size: 55px;
+
     }
  }
 @media (max-width: 500px){
     .Top h1{
         font-size: 50px;
+
     }
  }
  @media (max-width: 450px){
     .Top h1{
         font-size: 40px;
+
+    }
+    body{
+        background-size: 30vh
     }
  }
  @media (max-width: 400px){
     .Top p{
         font-size: 20px;
     }
- }
- @media (max-width: 400px){
     .main-nav{
         font-size: 20px;
     }
  }
+ 

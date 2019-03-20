@@ -1,4 +1,4 @@
-// scroll page animaition
+// Nav to page animaition
 $(document).ready(function() {
   $('#topButton').click(function() {    
     animateScrollTo('#topPage')
@@ -26,7 +26,7 @@ function animateScrollTo(id) {
   }, 600, 'swing');
 }
 
-// scroll nav animation
+// hide show nav animation
 let startPos = 0,winScrollTop = 0;
 $(window).on('scroll',function(){
     winScrollTop = $(this).scrollTop();
@@ -37,3 +37,56 @@ $(window).on('scroll',function(){
     }
     startPos = winScrollTop;
 });
+
+//
+$(function(){
+	$(".subtxt").addClass("changed");
+	$(".fullname").addClass("loaded");
+	$(".smalltxt").css('opacity', '1');
+	$(".downbtn a").css({
+		"opacity" : "1",
+		"padding" : "15px 10px",
+	});
+});
+
+$(function(){
+  // スクロールのファンクション
+  $(window).scroll(function (){
+    // それぞれのeffectに反映する
+    $(".content").each(function(){
+      // effectの位置
+      let Position = $(this).offset().top;
+      // スクロールの量
+      let scroll = $(window).scrollTop();
+      // ウィンドウの高さ
+      let windowHeight = $(window).height();
+      // スクロールして要素が見える時(必要に応じて変更)
+      if (scroll > Position - windowHeight + windowHeight/5){
+        if($(window).width() < 768) {
+            // 追加のエフェクト(スマホ)
+            $(".fadeintxt span",this).css({
+              "opacity" : "1",
+              "font-size": "32px"
+            });
+            $(".article", this).css('opacity', '1');
+          } else {
+            // 追加のエフェクト(PC)
+            $(".fadeintxt span",this).css({
+              "opacity" : "1",
+              "font-size": "50px"
+            });
+            $(".article", this).css('opacity', '1');
+          }
+        } else {
+        	$(".fadeintxt span",this).css({
+              "opacity" : "0",
+              "font-size": "0"
+            });
+            $(".article", this).css('opacity', '0');
+        }
+    });
+  });
+});
+
+
+

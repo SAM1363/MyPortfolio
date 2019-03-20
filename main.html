@@ -5,106 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>Samson Blankenship</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
-</head>
-<body>
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
     <script src="main.js"></script>
-
+</head>
+<body>
     <header>
         <div>
             <nav>
                 <ul class="main-nav">
                     <a href='#topPage' id="topButton">Top</a>
-                    <a href='#aboutPage' id="aboutButton" >About me</a>
+                    <a href='#aboutPage' id="aboutButton" >About</a>
                     <a href='#projectsPage' id="projectsButton">Projects</a>
                     <a href='#contactPage' id="contactButton">Contact</a>
                 </ul>
             </nav>
         </div>
     </header>
+    
 
 
     <main>
         <!-- Top slide  -->
-        <div class="back" id="topPage">
-            <div class="Top">
-                <section class="Myname"><h1>Samson  Blanlenship</h1></section>        
-                <p>Full-Stack Developer</p>
-            </div>
-
-            <div class="Arrow">
-                <a href="#"><span></span></a>
+        <div id="topPage" class="sameEffect">
+            <div class="gradient">
+                    <div class="Top">
+                        <h1>Samson  Blanlenship</h1>        
+                        <p>Full-Stack Developer</p>
+                    </div>
+        
+                    <div class="Arrow">
+                        <a href="#"><span></span></a>
+                    </div>
             </div>
         </div> 
 
         <!-- About slide -->
-        <div class="scroll" id="aboutPage">
-            <div class="about-content">
-                <h1>About me</h1>
-                Who I am, What do I do
+        <!-- <div id="aboutPage" class="sameEffect">
+            <div class="gradient">
+                <div class="about-content">
+                    <h1>About me</h1>
+                </div>
             </div>
-        </div> 
-
+        </div>  -->
+        <!-- about -->
+        <div id="aboutPage" class="about sameEffect">
+                <div class="gradient">
+                    <div class="content">
+                        <h2 class="fadeintxt">
+                            <span>A</span>
+                            <span>B</span>
+                            <span>O</span>
+                            <span>U</span>
+                            <span>T</span>
+                        </h2>
+                        <div class="article">
+                            <p>フリーランスのフロントエンドディベロッパーです。<br>
+                            友人と一緒に、基本的にはリモートで活動しています。</p>
+                        </div>
+                        <a class="linkbtn" href="#">more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- about-end -->
         <!-- Projects slide  -->
-        <div class="back" id="projectsPage">
-            <div class="projects-content">
-                <h1>Projects</h1> 
-
-                <a href="#" class="DigitalCrafts-Projects">
-                    <div class="Pro-Digi">
-                        <p>My Projects At</p>
-                        <h3>DigitalCrafts</h3>
-                    </div>
-                </a>
-
-                <a href="#" class="LaPraim-Projects">
-                    <div class="Pro-Lap">
-                        <p>My Projects At</p>
-                        <h3>LaPraim</h3>
-                    </div>
-                </a>
-            </div> 
+        <div id="projectsPage" class="sameEffect">
+            <div class="gradient">
+                <div class="projects-content">
+                    <h1>Projects</h1> 
+    
+                    <a href="#" class="DigitalCrafts-Projects">
+                        <div class="Pro-Digi">
+                            <p>My Projects At</p>
+                            <h3>DigitalCrafts</h3>
+                        </div>
+                    </a>
+    
+                    <a href="#" class="LaPraim-Projects">
+                        <div class="Pro-Lap">
+                            <p>My Projects At</p>
+                            <h3>LaPraim</h3>
+                        </div>
+                    </a>
+                </div> 
+            </div>
         </div>
-        <!-- </div>  -->
 
         <!-- Contact slide -->
-        <div class="scroll" id="contactPage">
-            <div class="contact-content">
-                <h1>Contact me</h1>
+        <div id="contactPage" class="sameEffect">
+            <div class="gradient">
+                <div class="contact-content">
+                    <h1>Contact me</h1>
+                </div>
             </div> 
         </div> 
     </main>
-    <!-- <hr> -->
-    <!-- <div class="Skills">
-        <h1>Skills</h1>
-        <div class="img-container">
-            <div id="html">
-                <img src="/img/html.png" alt="">
-            </div>
-            <div id="css">
-                <img src="/img/css.png" alt="">
-            </div> 
-            <div id="js">
-                <img src="/img/js.png" alt="">
-            </div>
-            <div id="python">
-                <img src="/img/python.png" alt="">
-            </div>
-            <div id="jq">
-                <img src="/img/jq.png" alt="">
-            </div>
-            <div id="postgres">
-                <img src="/img/post.png" alt="">
-            </div>
-            <div id="node">
-                <img src="/img/ node.png" alt="">
-            </div>
-            <div id="react">
-                <img src="/img/react.png" alt="">
-            </div>
-        </div>
-    </div> -->
 </body>
 </html>
