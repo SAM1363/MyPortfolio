@@ -88,12 +88,6 @@ $(function(){
   });
 });
 
-// $(function(){
-//   $('.linkbtn').click(function(){
-//     $('#pro-skill').toggleClass('dropdown');
-//   });
-// });
-
 $(document).ready(function(){
   $("#morebtn").click(function(){
     $("#pro-skill").toggleClass("dropdown");
@@ -101,8 +95,8 @@ $(document).ready(function(){
     $("#skills").toggleClass("dropdown");
   });
   $('#morebtn').click(function(){
-    $(this).text(function(i,v){
-      return v === 'more' ? 'hide' : 'more'
+    $(this).text(function(x, y){
+      return y === 'More' ? 'Hide' : 'More'
     })
   })
 });
