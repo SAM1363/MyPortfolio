@@ -88,6 +88,8 @@ $(function(){
   });
 });
 
+
+
 $(document).ready(function(){
   $("#morebtn").click(function(){
     $("#pro-skill").toggleClass("dropdown");
@@ -98,6 +100,12 @@ $(document).ready(function(){
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
     })
-  })
+  });
+  $('#skills').on(function(){
+    $(".boxfadein").css({
+      "opacity" : "1",
+      "font-size": "20px"
+    });  })
 });
+
 
