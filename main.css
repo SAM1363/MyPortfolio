@@ -320,18 +320,19 @@ transition-delay: .9s;
     margin: 6px 0 6px 0;
 }
 #skills p{
-    color: red;
+    color: black;
     margin: 0%;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker' cursive;
 }
+
 .box {
     opacity: 0;
     margin: 10px;
     display: inline-block;
 }
 .boxfadein .box {
-    transition: all .5s ease-out;
+    opacity: 1;
+    transition: all 1s ease-out;
 }
 
 .boxfadein .box:nth-child(3) {

@@ -101,11 +101,10 @@ $(document).ready(function(){
       return y === 'More' ? 'Hide' : 'More'
     })
   });
-  $('#skills').on(function(){
-    $(".boxfadein").css({
-      "opacity" : "1",
-      "font-size": "20px"
-    });  })
+  $('#morebtn').click(function(){
+    $("#pro-skill").toggleClass('boxfadein');
+    $("#skills").toggleClass('boxfadein');
+  })
 });
 
 
