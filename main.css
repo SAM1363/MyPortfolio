@@ -12,6 +12,40 @@ a{
     color:red;
     transition: .1s;
 }
+.fadeintxt span {
+    opacity: 0;
+    color: rgb(250, 2, 2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 0 20px 0;
+    transition: all .6s ease-out;
+}
+.fadeintxt span:nth-child(2) {
+transition-delay: .3s;
+}
+
+.fadeintxt span:nth-child(3) {
+transition-delay: .4s;
+}
+
+.fadeintxt span:nth-child(4) {
+transition-delay: .5s;
+}
+
+.fadeintxt span:nth-child(5) {
+transition-delay: .6s;
+}
+
+.fadeintxt span:nth-child(6) {
+transition-delay: .7s;
+}
+
+.fadeintxt span:nth-child(7) {
+transition-delay: .8s;
+}
+
+.fadeintxt span:nth-child(8) {
+transition-delay: .9s;
+}
 
 /* //////////////////  Nav Stuff  ////////////////////////////////////////////////// */
 
@@ -57,7 +91,6 @@ header.hide {
 .main-nav a:hover {
     border-color: rgb(253, 4, 41);
 }
-
 
 /*  Arrow animation　*/
 .Arrow a {
@@ -130,7 +163,6 @@ header.hide {
     height: 100vh;
     animation: gradientAnimation 50s ease infinite;
     background-position: center center;
-
 }
 
 @keyframes gradientAnimation {
@@ -170,9 +202,9 @@ header.hide {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1
-
+    z-index: -1;
 }
+
 #projectsPage{
     background: url(./img/project2.png);
     background-position: center center;
@@ -190,8 +222,16 @@ header.hide {
     background-repeat: no-repeat;
     z-index: -1
 }
+.article {
+    font-size: 20px;
+    opacity: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 2.5;
+    transition: 2s;
+    transition-delay: .6s;
+}
 
-/* ////////////////////  Text & Content Stuff  /////////////////////////////////// */
 .content {
     letter-spacing:2px;
     margin: auto;
@@ -200,7 +240,13 @@ header.hide {
     left: 0;
     right: 0;
     bottom: 0;
+    margin-top: 10%;
+    /* height: 10%; */
 }
+
+/* ////////////////////  Text & Content Stuff  /////////////////////////////////// */
+
+
 /* Top page content */
 .Top{
     display: flex; 
@@ -235,50 +281,13 @@ header.hide {
 }
 
 /* ////////////  About page content  ////////////////////////////////////////////////////////////////////////// */
-
-.fadeintxt span {
-    opacity: 0;
-    color: rgb(250, 2, 2);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0 0 20px 0;
-    transition: all .6s ease-out;
+.aboutContent{
+    margin-top: 15%;
 }
-.fadeintxt span:nth-child(2) {
-transition-delay: .3s;
+.move-about{
+    margin-top: 0%;
 }
 
-.fadeintxt span:nth-child(3) {
-transition-delay: .4s;
-}
-
-.fadeintxt span:nth-child(4) {
-transition-delay: .5s;
-}
-
-.fadeintxt span:nth-child(5) {
-transition-delay: .6s;
-}
-
-.fadeintxt span:nth-child(6) {
-transition-delay: .7s;
-}
-
-.fadeintxt span:nth-child(7) {
-transition-delay: .8s;
-}
-
-.fadeintxt span:nth-child(8) {
-transition-delay: .9s;
-}
-.article {
-    font-size: 20px;
-    opacity: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    line-height: 2.5;
-    transition: 2s;
-    transition-delay: .6s;
-}
 .linkbtn {
     font-weight: bold;
     color: #fff;
@@ -420,6 +429,13 @@ transition-delay: 1.5s;
     /*fixedをトル！*/
     background-size: cover;
     }
+    .aboutContent{
+        margin-top: 50%;
+    }
+    .move-about{
+        margin-top: 0%;
+    }
+
     #projectsPage{
         background: none;
     }    
@@ -456,11 +472,17 @@ transition-delay: 1.5s;
     /*fixedをトル！*/
     background-size: cover;
     }
+    #contactPage h2{
+        margin-top: 30%;
+    }
 
 }
 @media (max-width: 710px){
     .Top h1{
         font-size: 60px;
+    }
+    .box{
+        margin: 0%;
     }
 }
 @media (max-width: 610px){

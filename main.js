@@ -95,16 +95,14 @@ $(document).ready(function(){
     $("#pro-skill").toggleClass("dropdown");
     $("#profile").toggleClass("dropdown");
     $("#skills").toggleClass("dropdown");
-  });
-  $('#morebtn').click(function(){
+    $(".aboutContent").toggleClass("move-about");
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
-    })
-  });
-  $('#morebtn').click(function(){
+    });
     $("#pro-skill").toggleClass('boxfadein');
     $("#skills").toggleClass('boxfadein');
-  })
-});
+    })
+  });
+  
 
 
