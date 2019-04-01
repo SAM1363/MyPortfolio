@@ -387,6 +387,17 @@ transition-delay: 1.5s;
     margin: 20px 0px 10px 0px;
     letter-spacing: 3px;
 }
+
+/* /////////  Contact page  /////////////////////////////////////////////////// */
+.contactIcon{
+    font-size: 25px;
+}
+.contactIcon i {
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+}
+
+
 /* /////////  Responsive Design  ////////////////////////////////////////////// */
 @media (max-width: 768px){
     .main-nav a{

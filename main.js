@@ -96,11 +96,11 @@ $(document).ready(function(){
     $("#profile").toggleClass("dropdown");
     $("#skills").toggleClass("dropdown");
     $(".aboutContent").toggleClass("move-about");
+    $("#pro-skill").toggleClass('boxfadein');
+    $("#skills").toggleClass('boxfadein');
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
     });
-    $("#pro-skill").toggleClass('boxfadein');
-    $("#skills").toggleClass('boxfadein');
     })
   });
   
