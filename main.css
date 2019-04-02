@@ -392,7 +392,7 @@ transition-delay: 1.5s;
 .contactIcon{
     font-size: 25px;
 }
-.contactIcon i {
+.contactIcon a {
     padding: 0 10px 0 10px;
     cursor: pointer;
 }
