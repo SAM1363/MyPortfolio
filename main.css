@@ -1,5 +1,4 @@
 body, html, main {
-    /* important */
     height: 100%;
     width:100%;
     margin: 0% auto;
@@ -70,10 +69,11 @@ header.hide {
 
 .main-nav{
     padding: 0%;
-    margin: 17px;
+    margin: 15px;
     display: flex;
-    justify-content: space-around;
     font-family: sans-serif;
+    justify-content: space-around;
+    justify-items: center;
 }
 
 .main-nav a {
@@ -83,7 +83,7 @@ header.hide {
     font-weight: bold;
     width: 100px;
     height: 25px;
-    border: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     text-align: center;
     line-height: 25px;
     transition: all .6s;
@@ -287,6 +287,9 @@ header.hide {
 .aboutContent{
     margin-top: 10%;
 }
+.aboutContent h1{
+    margin: 0%;
+}
 .move-about{
     margin-top: -5%;
 }
@@ -392,6 +395,9 @@ transition-delay: 1.5s;
 }
 
 /* /////////  Contact page  /////////////////////////////////////////////////// */
+.contactContent{
+    margin-top: -10%;
+}
 .contactIcon{
     font-size: 25px;
 }
@@ -403,27 +409,29 @@ transition-delay: 1.5s;
 
 /* /////////  Responsive Design  ////////////////////////////////////////////// */
 @media (max-width: 768px){
+    .content{
+        width: 100%;
+    }
     .main-nav a{
         font-size: 17px;
     }
     #topPage{
         background: none;
-    }    
+    }
+        
     /*change the pc background style*/
     #topPage::before {
     content: "";
     /* display: block; */
-    /* display:flex; */
+    display:flex;
     position: fixed;
-    /* top: 0;
-    left: 0; */
-    -webkit-transform: translate3d(0, 0, -1px);
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, -1px);
     transform: translate3d(0, 0, -1px);
     width: 100%;
-    /* height: 100vh; */
-    height: 0;
+    height: 100vh;
     background: url(./img/austin.jpg) center/cover no-repeat;
-    /*fixedをトル！*/
     background-size: cover;
     }
 
@@ -442,12 +450,10 @@ transition-delay: 1.5s;
     width: 100%;
     height: 100vh;
     background: url(./img/about2.png) center/cover no-repeat;
-    /*fixedをトル！*/
     background-size: cover;
+    
     }
-    /* .aboutContent{
-        margin-top: 30%;
-    } */
+
     .move-about{
         margin-top: 0%;
     }
@@ -467,12 +473,15 @@ transition-delay: 1.5s;
     width: 100%;
     height: 100vh;
     background: url(./img/project2.png) center/cover no-repeat;
-    /*fixedをトル！*/
     background-size: cover;
+    }
+
+    .ProjectBox{
+        width: 95%;
     }
     #contactPage{
         background: none;
-    }    
+    }  
     /*change the pc background style*/
     #contactPage::before {
     content: "";
@@ -485,7 +494,6 @@ transition-delay: 1.5s;
     width: 100%;
     height: 100vh;
     background: url(./img/contact.png) center/cover no-repeat;
-    /*fixedをトル！*/
     background-size: cover;
     }
     
@@ -526,8 +534,14 @@ transition-delay: 1.5s;
     }
     .linkbtn{
         padding: 10px 20px;
-
     }
+    .aboutContent{
+        margin-top: 30%;
+    }
+    .move-about{
+        margin-top: 0%;
+    }
+
 }
 @media (max-width: 414px){
     .Top p{
@@ -535,6 +549,9 @@ transition-delay: 1.5s;
     }
     .main-nav a{ 
         font-size: 15px;
+    }
+    .article{
+        margin: 0%;
     }
 }
 
