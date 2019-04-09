@@ -18,6 +18,10 @@ $(document).ready(function() {
   $('#contactButton').click(function() {    
     animateScrollTo('#contactPage')
   })
+  $("#skills").toggleClass("dropdown");
+
+  $("#skills").toggleClass('boxfadein');
+
 })
 
 function animateScrollTo(id) {
@@ -94,15 +98,16 @@ $(document).ready(function(){
   $("#morebtn").click(function(){
     $("#pro-skill").toggleClass("dropdown");
     $("#profile").toggleClass("dropdown");
-    $("#skills").toggleClass("dropdown");
     $(".aboutContent").toggleClass("move-about");
     $("#pro-skill").toggleClass('boxfadein');
-    $("#skills").toggleClass('boxfadein');
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
     });
     })
   });
-  
+      // $("#skills").toggleClass('boxfadein');
+      // $("#skills").toggleClass("dropdown");
+
+
 
 
