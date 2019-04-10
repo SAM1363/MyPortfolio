@@ -15,13 +15,9 @@ $(document).ready(function() {
   })
 })
 $(document).ready(function() {
-  $('#contactButton').click(function() {    
-    animateScrollTo('#contactPage')
+  $('#skillButton').click(function() {    
+    animateScrollTo('#skillPage')
   })
-  $("#skills").toggleClass("dropdown");
-
-  $("#skills").toggleClass('boxfadein');
-
 })
 
 function animateScrollTo(id) {
@@ -73,6 +69,7 @@ $(function(){
               "font-size": "52px"
             });
             $(".article", this).css('opacity', '1');
+
           } else {
             // 追加のエフェクト(PC)
             $(".fadeintxt span",this).css({
@@ -80,6 +77,7 @@ $(function(){
               "font-size": "62px"
             });
             $(".article", this).css('opacity', '1');
+
           }
         } else {
           $(".fadeintxt span",this).css({
@@ -99,15 +97,12 @@ $(document).ready(function(){
     $("#pro-skill").toggleClass("dropdown");
     $("#profile").toggleClass("dropdown");
     $(".aboutContent").toggleClass("move-about");
-    $("#pro-skill").toggleClass('boxfadein');
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
     });
     })
   });
-      // $("#skills").toggleClass('boxfadein');
-      // $("#skills").toggleClass("dropdown");
-
+      
 
 
 
