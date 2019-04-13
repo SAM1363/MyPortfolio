@@ -4,7 +4,7 @@ body, html, main {
     margin: 0% auto;
     padding: 0%;
 }
-a {
+a *{
     text-decoration: none;
     cursor: pointer;
 }
@@ -92,6 +92,7 @@ header.hide {
 
 /*  Arrow animation　*/
 .Arrow a {
+    cursor: pointer;
     position: absolute;
     bottom: 20px;
     left: 50% ;
@@ -104,6 +105,7 @@ header.hide {
 }
 
 .Arrow a span {
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 50%;
@@ -148,7 +150,7 @@ header.hide {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     -webkit-transform: translate3d(0, 0, 1px);
     transform: translate3d(0, 0, 1px);
     background: linear-gradient(45deg,
@@ -159,7 +161,7 @@ header.hide {
     rgba(115, 201, 129, 0.714));
     background-size: 1000%;
     min-height: 100vh;
-    animation: gradientAnimation 50s ease infinite;
+    animation: gradientAnimation 40s ease infinite;
     background-position: center center;
 }
 
@@ -182,6 +184,7 @@ header.hide {
     position: relative;
     min-height: 100vh; 
     text-align: center;
+    letter-spacing: 1px;
     /* z-index: -1 */
 }
 
@@ -230,8 +233,8 @@ header.hide {
     transition-delay: .6s;
 }
 
-/* .content {
-    display: flex;
+.content {
+    /* display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -240,8 +243,8 @@ header.hide {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-} */
+    bottom: 0; */
+}
 
 /* ////////////////////  Text & Content Stuff  /////////////////////////////////// */
 
@@ -282,7 +285,13 @@ header.hide {
 /* ////////////  About page content  ////////////////////////////////////////////////////////////////////////// */
 
 .aboutContent{
-    margin-top: 10%;
+    margin-top: 17%;
+    transition: .5s;
+
+}
+.move-about{
+    margin-top: -5%;
+    transition: .5s;
 }
 .aboutContent h1{
     margin: 0%;
@@ -294,14 +303,12 @@ header.hide {
 }
 .about-icon a{
     padding: 0 15px 0 15px;
+    text-decoration: none;
 }
 .about-icon a:hover{
     color:red;
-    transition: .1s;
 }
-.move-about{
-    margin-top: -5%;
-}
+
 .resume{
     display: flex;
     text-align: center;
@@ -314,27 +321,32 @@ header.hide {
     padding: 15px 30px;
     border: 1px solid #fff;
     border-radius: 10px;
-    transition: 1s;
 }
 .linkbtn:hover {
     color: #ff0000;
     background-color: #fff;
     cursor: pointer;
+    transition: 1s;
+
 }
 
 .dropdown{
     visibility: visible;
-    color:rgb(121, 118, 118);
+    color:rgb(85, 80, 80);
     border: solid transparent 0.5px;
     background-color: rgb(255, 255, 255);
     opacity: .9;
+    transition: all .5;
 }
+
 
 #pro-skill{
     margin: 0 20px 0 20px;
     visibility: hidden;
     margin-top:17px;
     letter-spacing: normal;
+    /* transition: all .5s; */
+
 }
 #profile{
     padding: 8px 8px 0 8px;
@@ -344,40 +356,98 @@ header.hide {
 }
 
 /* ////////////  Projects page content  //////////////////////////////////////////////////////// */
-.ProjectBox{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    color: red;
-    margin: 30px;
-}
+
+
 .pro{
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;    
     border: #ff0000 solid 2px;
-    margin: 10px 0 10px 0;
-    padding: 20px;
-    width: 200px;
+    /* padding: 10px; */
+    margin: 20px;
+    width: 450px;
+    height: 190px;
+    box-shadow: 0 0 30px #333;
+    transition: trasform .3s;
+    transition: .5s ease;
+    perspective: 500px; 
+
 }
-/* .BoxContent{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 2px solid rgb(243, 122, 122);
-    width: 800px;
-    height: 140px;
-    background-color: white;
-    opacity: 0.8;
+.pro:hover{
+    transform: scale(1.05);
+}
+.details h4{
+    padding: 0%;
+    margin: 0%;
+    color:red;
+}
+.article a {
+    text-decoration: none;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.pro .details {
+	width: 70%;
+	height: 60%;	
+	padding: 3% 5%;
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+	transform-origin: 50%;
+    background: rgba(255,255,255,0.9);
+    color:rgb(12, 12, 12);
+	opacity: 0;
+	transition:  0.4s ease-in;
+}
+.pro:hover .details {
+	transform: translate(-50%, -50%) rotateY(0deg);
+	opacity: 1;
+}
+
+.mentor,
+.pokemon,
+.blackjack,
+.react{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.mentor{
+    background-image: url(img/mentor.png);
+    
+}
+.pokemon{
+    background-image: url(img/Pokemon.png);
+}
+.blackjack{
+    background-image: url(img/blackjack.png);
+}
+.react{
+    background-image: url(img/react-game-min.png);
+}
+
+/* #pokeV{
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    background: url('img/Pokemon.png') no-repeat;
+    background-size: cover; 
+    background-position: center center;
 } */
 
-/* .BoxContent h3{
-    font-size: 30px;
-    margin: 20px 0px 10px 0px;
-    letter-spacing: 3px;
-} */
+
+
 
 /* /////////  Skill page  /////////////////////////////////////////////////// */
 .skillContent{
     margin-top: -10%;
 }
 #skills p{
-    color: rgb(233, 201, 201);
+    color: rgb(151, 103, 103);
     margin: 0%;
     font-family: 'Permanent Marker' cursive;
 }
@@ -397,36 +467,62 @@ header.hide {
 
 /* /////////  Responsive Design  ////////////////////////////////////////////// */
 @media (max-width: 768px){
-    .content{
-        width: 100%;
-    }
     .main-nav a{
         font-size: 17px;
     }
     #topPage{
         background: none;
     }
-        
-    /*change the pc background style*/
-    #topPage::before {
-    content: "";
+    .pro{
+        width: 400px;
+    }
+    div.aboutContent{
+        margin-top: 40%;
+    }
+    div.move-about{
+        margin-top: -5%;
+    }
+    
+    /* #topPage,
+    #aboutPage,
+    #projectPage,
+    #skillPage::before{
+        content: "";
     display:flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     transform: translate3d(0, 0, -1px);
     transform: translate3d(0, 0, -1px);
     width: 100%;
-    height: 100vh;
-    background: url(./img/austin.jpg) center/cover no-repeat;
+    min-height:100%;
     background-size: cover;
+    background-attachment: fixed;
+
+    }
+     */
+
+    #topPage::before {
+    background: url(./img/austin.jpg) center/cover no-repeat;
+    content: "";
+    display:flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, -1px);
+    transform: translate3d(0, 0, -1px);
+    width: 100%;
+    min-height:100%;
+    background-size: cover;
+    background-attachment: fixed;
+
     }
 
     #aboutPage{
         background: none;
     }    
-    /*change the pc background style*/
     #aboutPage::before {
+    background: url(./img/about2.png) center/cover no-repeat;
     content: "";
     display: block;
     position: absolute;
@@ -435,21 +531,16 @@ header.hide {
     transform: translate3d(0, 0, -1px);
     transform: translate3d(0, 0, -1px);
     width: 100%;
-    height: 100vh;
-    background: url(./img/about2.png) center/cover no-repeat;
+    min-height:100%;
     background-size: cover;
-    
-    }
-
-    .move-about{
-        margin-top: 0%;
+    background-attachment: fixed;
     }
 
     #projectsPage{
         background: none;
     }    
-    /*change the pc background style*/
     #projectsPage::before {
+    background: url(./img/project2.png) center/cover no-repeat;
     content: "";
     display: block;
     position: absolute;
@@ -458,19 +549,17 @@ header.hide {
     transform: translate3d(0, 0, -1px);
     transform: translate3d(0, 0, -1px);
     width: 100%;
-    min-height: 100vh;
-    background: url(./img/project2.png) center/cover no-repeat;
+    min-height:100%;
     background-size: cover;
+    background-attachment: fixed;
+
     }
 
-    .ProjectBox{
-        width: 95%;
-    }
     #skillPage{
         background: none;
     }  
-    /*change the pc background style*/
     #skillPage::before {
+    background: url(./img/contact.png) center/cover no-repeat;
     content: "";
     display: block;
     position: absolute;
@@ -479,9 +568,10 @@ header.hide {
     transform: translate3d(0, 0, -1px);
     transform: translate3d(0, 0, -1px);
     width: 100%;
-    height: 100vh;
-    background: url(./img/contact.png) center/cover no-repeat;
+    min-height:100%;
     background-size: cover;
+    background-attachment: fixed;
+
     }
     
 
@@ -505,13 +595,14 @@ header.hide {
     }
 }
 @media (max-width: 525px){
+    .gradient{
+        height: 100%;
+    }
+    .pro{
+        width: 300px;
+    }
     .BoxContent{
         padding-bottom:40px;
-    }
-    #and{
-        display: flex;
-        flex-direction: row;
-        padding-left: 47%;
     }
     .content p{
         font-size: 15px 
@@ -530,7 +621,7 @@ header.hide {
     }
 
 }
-@media (max-width: 414px){
+@media (max-width: 375px){
     .Top p{
         font-size: 20px;
     }
@@ -539,6 +630,12 @@ header.hide {
     }
     .article{
         margin: 0%;
+    }
+    div.aboutContent{
+        margin-top: 60%;
+    }
+    div.move-about{
+        margin-top: -5%;
     }
 }
 

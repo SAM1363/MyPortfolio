@@ -8,6 +8,9 @@ $(document).ready(function() {
   $('#aboutButton').click(function() {    
     animateScrollTo('#aboutPage')
   })
+  $('#arrow').click(function(){
+    animateScrollTo('#aboutPage')
+  })
 })
 $(document).ready(function() {
   $('#projectsButton').click(function() {    
@@ -95,7 +98,7 @@ $(function(){
 $(document).ready(function(){
   $("#morebtn").click(function(){
     $("#pro-skill").toggleClass("dropdown");
-    $("#profile").toggleClass("dropdown");
+    $("#profile").toggleClass("dropdown");   
     $(".aboutContent").toggleClass("move-about");
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
