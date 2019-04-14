@@ -399,7 +399,8 @@ header.hide {
     background: rgba(255,255,255,0.9);
     color:rgb(12, 12, 12);
 	opacity: 0;
-	transition:  0.4s ease-in;
+    transition:  0.4s ease-in;
+    overflow: auto;
 }
 .pro:hover .details {
 	transform: translate(-50%, -50%) rotateY(0deg);
