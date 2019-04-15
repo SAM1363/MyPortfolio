@@ -386,6 +386,7 @@ header.hide {
     font-size: 25px;
     padding-left: 10px;
 }
+
 .pro .details {
 	width: 70%;
 	height: 60%;	
@@ -414,7 +415,6 @@ header.hide {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 .mentor{
