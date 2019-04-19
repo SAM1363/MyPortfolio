@@ -148,25 +148,64 @@ header.hide {
 /* Arroe animation end */
 
 /* //////////////  Background Stuff  ///////////////////////////////////////////////////////////////// */
+#topPage{
+    background: url(./img/austin.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -1 */
 
-.gradient{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* padding-top: 3%; */
-  -webkit-transform: translate3d(0, 0, 1px);
-  transform: translate3d(0, 0, 1px);
-  background: linear-gradient(45deg,
-  rgba(230, 250, 141, 0.856),
-  rgba(100, 243, 231, 0.7),
-  rgba(189, 114, 223, 0.7),
-  rgba(146, 156, 245, 0.7),
-  rgba(115, 201, 129, 0.714));
-  background-size: 1000%;
-  min-height: 100vh;
-  animation: gradientAnimation 40s ease infinite;
-  background-position: center center;
 }
+#aboutPage{
+    background: url(./img/about2.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -1; */
+}
+
+#projectsPage{
+    background: url(./img/project2.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -1 */
+
+}
+#skillPage{
+    background: url(./img/skill5.jpeg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: -1 */
+}
+.gradient{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 3%; */
+    -webkit-transform: translate3d(0, 0, 1px);
+    transform: translate3d(0, 0, 1px);
+    background: linear-gradient(to right,
+    #ef32d9,
+    #89fffd
+    );
+    opacity: .91;
+    background-size: 180%;
+    min-height: 100vh;
+    animation: gradientAnimation 30s ease infinite;
+    background-position: center center;
+}
+/* rgba(230, 250, 141, 0.856),
+rgba(100, 243, 231, 0.7),
+rgba(189, 114, 223, 0.7),
+rgba(146, 156, 245, 0.7),
+rgba(115, 201, 129, 0.714) */
 
 @keyframes gradientAnimation {
   0% {
@@ -191,41 +230,7 @@ header.hide {
   /* z-index: -1 */
 }
 
-#topPage{
-  background: url(./img/austin.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1
 
-}
-#aboutPage{
-  background: url(./img/about2.png);
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-#projectsPage{
-  background: url(./img/project2.png);
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1
-
-}
-#skillPage{
-  background: url(./img/contact.png);
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1
-}
 .article {
   font-size: 20px;
   opacity: 0;
@@ -441,19 +446,21 @@ opacity: 1;
 }
 #skills i{
   visibility: visible;
-  color: rgba(252, 5, 5, 0.616);
-  margin:15px;
-  font-size: 50px;
+  color: red;
+  margin:20px;
+  font-size: 70px;
 }
 
 .box {
     opacity: 0;
     margin: 10px;
     display: inline-block;
+    transition: .5;
 }
 .box p{
     font-family: 'Permanent Marker' cursive;
     margin: 0%;
+    color:white;
 }
 .boxfadein .box {
     opacity: 1;
@@ -515,33 +522,13 @@ opacity: 1;
       margin-top: 40%;
   }
   div.move-about{
-      margin-top: -5%;
+      margin-top: 0%;
   }
-  
-  /* #topPage,
-  #aboutPage,
-  #projectPage,
-  #skillPage::before{
-      content: "";
-  display:flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate3d(0, 0, -1px);
-  transform: translate3d(0, 0, -1px);
-  width: 100%;
-  min-height:100%;
-  background-size: cover;
-  background-attachment: fixed;
-
-  }
-   */
 
   #topPage::before {
   background: url(./img/austin.jpg) center/cover no-repeat;
   content: "";
-  @include display-flex;
-  // display:flex;
+  display:flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -595,7 +582,7 @@ opacity: 1;
       background: none;
   }  
   #skillPage::before {
-  background: url(./img/contact.png) center/cover no-repeat;
+  background: url(./img/skill5.jpeg) center/cover no-repeat;
   content: "";
   display: block;
   position: absolute;
@@ -608,10 +595,8 @@ opacity: 1;
   background-size: cover;
   background-attachment: fixed;
 
-  }
-  
-
 }
+
 @media (max-width: 710px){
   .Top h1{
       font-size: 60px;
@@ -644,7 +629,7 @@ opacity: 1;
       font-size: 15px 
   }
   #skills .fab {
-      font-size: 25px;
+      font-size: 45px;
   }
   .linkbtn{
       padding: 10px 20px;
@@ -671,7 +656,7 @@ opacity: 1;
       margin-top: 60%;
   }
   div.move-about{
-      margin-top: -5%;
+      margin-top:0%;
   }
 }
 
