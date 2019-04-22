@@ -195,7 +195,7 @@ header.hide {
     #ef32d9,
     #89fffd
     );
-    opacity: .91;
+    opacity: .90;
     background-size: 180%;
     min-height: 100vh;
     animation: gradientAnimation 20s ease infinite;
@@ -446,9 +446,19 @@ opacity: 1;
 }
 #skills i{
   visibility: visible;
-  color: red;
-  margin:20px;
-  font-size: 70px;
+  color: #ACB6E5;
+  background: -webkit-linear-gradient(45deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 25px;
+  font-size: 100px;
+}
+
+div#skills{
+  background-color: white;
+  opacity: .75;
+  margin: 0 5% 0 5%;
+  height: auto;
 }
 
 .box {
@@ -460,8 +470,11 @@ opacity: 1;
 .box p{
     font-family: 'Permanent Marker' cursive;
     margin: 0%;
-    color:white;
-}
+    color: #ACB6E5;
+    background: -webkit-linear-gradient(45deg, #ACB6E5, #86FDE8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 .boxfadein .box {
     opacity: 1;
     transition: all .5s ease-out;
@@ -524,6 +537,9 @@ opacity: 1;
   div.move-about{
       margin-top: 0%;
   }
+  #skills i {
+    font-size: 70px;
+}
 
   #topPage::before {
   background: url(./img/austin.jpg) center/cover no-repeat;
@@ -628,7 +644,7 @@ opacity: 1;
   .content p{
       font-size: 15px 
   }
-  #skills .fab {
+  #skills i {
       font-size: 45px;
   }
   .linkbtn{
