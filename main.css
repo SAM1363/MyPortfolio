@@ -60,9 +60,6 @@ header{
   justify-content: flex-end;
   align-items: center;
   align-content: center;
-  /* opacity: 0.75;
-  border: 2px white solid;
-  background-color: white; */
   height: 60px;
   transition: .5s;
   -webkit-transform: translate3d(0, 0, 10px);
@@ -214,13 +211,13 @@ header.hide {
     -webkit-transform: translate3d(0, 0, 1px);
     transform: translate3d(0, 0, 1px);
     background: linear-gradient(to right,
-    #ef32d9,
+    #8432ef,
     #89fffd
     );
     opacity: .90;
     background-size: 180%;
     min-height: 100vh;
-    animation: gradientAnimation 20s ease infinite;
+    animation: gradientAnimation 10s ease infinite;
     background-position: center center;
 }
 /* rgba(230, 250, 141, 0.856),
@@ -456,8 +453,7 @@ opacity: 1;
 
 
 /* /////////  Skill page  /////////////////////////////////////////////////// */
-.skillContent{
-}
+
 #skills i{
   visibility: visible;
   color: #ef32d9;
@@ -470,7 +466,7 @@ opacity: 1;
 
 div#skills{
   background-color: white;
-  opacity: .75;
+  opacity: .7;
   margin: 0 10% 2% 10%;
   height: auto;
 }
@@ -484,10 +480,10 @@ div.box {
 .box p{
     /* font-family: 'Permanent Marker' cursive; */
     margin: 0%;
-    color: #ACB6E5;
-    background: -webkit-linear-gradient(45deg, #ACB6E5, #86FDE8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ef32d9;
+  background: -webkit-linear-gradient(135deg,  #ef32d9,#89fffd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 .boxfadein .box {
     opacity: 1;
