@@ -41,6 +41,13 @@ $(window).on('scroll',function(){
     startPos = winScrollTop;
 });
 
+$(function() {
+  $('#sub-nav').click(function(){
+      $('header').toggleClass('open');
+  });
+});
+
+
 ///////// font animation ///////////////////////
 
 $(function(){
@@ -99,6 +106,6 @@ $(document).ready(function(){
     })
   });
       
-
+  
 
 
