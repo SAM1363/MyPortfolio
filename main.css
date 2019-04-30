@@ -198,7 +198,7 @@ a:hover {
 
 }
 #skillPage{
-    background: url(./img/skill5.jpeg);
+    background: url(./img/skill2.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -621,7 +621,7 @@ div.box {
       background: none;
   }  
   #skillPage::before {
-  background: url(./img/skill5.jpeg) center/cover no-repeat;
+  background: url(./img/skill2.jpg) center/cover no-repeat;
   content: "";
   display: block;
   position: absolute;
