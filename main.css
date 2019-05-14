@@ -198,7 +198,7 @@ a:hover {
 
 }
 #skillPage{
-    background: url(./img/skill2.jpg);
+    background: url(./img/skill3.jpeg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -368,7 +368,7 @@ rgba(115, 201, 129, 0.714) */
   visibility: hidden;
   margin-top:17px;
   letter-spacing: normal;
-  /* transition: all .5s; */
+  transition: all .5s;
 
 }
 #profile{
@@ -621,7 +621,7 @@ div.box {
       background: none;
   }  
   #skillPage::before {
-  background: url(./img/skill2.jpg) center/cover no-repeat;
+  background: url(./img/skill3.jpeg) center/cover no-repeat;
   content: "";
   display: block;
   position: absolute;
@@ -656,13 +656,10 @@ div.box {
 }
 @media (max-width: 525px){
   .gradient{
-      height: 100%;
+      min-height: 100vh;
   }
   .pro{
       width: 300px;
-  }
-  .BoxContent{
-      padding-bottom:40px;
   }
   .content p{
       font-size: 15px 
@@ -683,12 +680,12 @@ div.box {
   }
 
 }
-@media (max-width: 375px){
+@media (max-width: 376px){
     h2.fadeintxt{
       margin: 25px 0 5px 0;
     }
-    .content {
-      min-height: 100%;
+    div.content {
+      min-height: 100vh;
     }
     .Top p{
         font-size: 20px;

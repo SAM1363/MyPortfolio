@@ -100,7 +100,6 @@ $(document).ready(function(){
     $("#pro-skill").toggleClass("dropdown");
     $("#profile").toggleClass("dropdown");   
     $(".aboutContent").toggleClass("move-about");
-    $("#pro-skill").fadeToggle(100);
     $(this).text(function(x, y){
       return y === 'More' ? 'Hide' : 'More'
     });
